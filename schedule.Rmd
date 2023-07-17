@@ -6,6 +6,43 @@ title: "Schedule"
 
 ```{r echo = F, message = F, warning=FALSE}
 library(dplyr)
-data.frame(Date = c("Jul 24 (Mon)", "Jul 25 (Tue)", "Jul 26 (Wed)", "Jul 27 (Thu)", "Jul 28 (Fri)")) %>% knitr::kable()
+day1_topic <- paste(c("Overview of Prism", "Sensitivity vs. Specificity", "Contingency Tables", "Fisher's Exact Test"), collapse = " | ")
+day2_topic <- paste(c("Binomial tests", "Chi square tests", "P-values", "Conﬁdence Intervals", "Null Hypothesis testing"), collapse = " | ")
+day3_topic <- paste(c("Gaussian distributions", "QQ plots", "t-tests", "Comparing two datasets"), collapse = " | ")
+day4_topic <- paste(c("Correlation", "Power analysis", "Multiple hypothesis testing"), collapse = " | ")
+day5_topic <- paste(c("N-hacking revisited", "Linear regression", "Nonlinear regression", "Analysis of variance (ANOVA)", "Survival analysis"), collapse = " | ")
+slides <- c('[Link](files/lec1/20e_statistics_lec1.pdf)',
+            '[Link](files/lec2/20e_statistics_lec2.pdf)',
+            '[Link](files/lec3/20e_statistics_lec3.pdf)',
+            '[Link](files/lec4/20e_statistics_lec4.pdf)',
+            '[Link](files/lec5/20e_statistics_lec5.pdf)')
+data.frame(Date = c("Jul 24 (Mon)", "Jul 25 (Tue)", "Jul 26 (Wed)", "Jul 27 (Thu)", "Jul 28 (Fri)"),
+           Topic = c(day1_topic, day2_topic, day3_topic, day4_topic, day5_topic),
+           Slides = slides,
+           Materials = c("[Link](https://taehoonh.me/CSHLbiostat2023/schedule.html/#Lecture1)")) %>%
+    knitr::kable()
 ```
 
+<br><br>
+
+### Prism Graphpad Files
+
+#### Lecture1
+
++ [AIP test](files/lec1/lec1_aip_test.pzfx)
+
+<br>
+
+#### Lecture2
+
+<br>
+
+#### Lecture3
+
+<br>
+
+#### Lecture4
+
+<br>
+
+#### Lecture5
