@@ -1,7 +1,7 @@
 name: "CSHL Biostatistics Course 2023"
 output_dir: '.'
 navbar:
-  title: BSTAT2023
+  title: Biostatistics Course 2023
 #  right:
 #  - text: Schedule
 #    href: schedule.html
