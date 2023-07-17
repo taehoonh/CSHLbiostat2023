@@ -18,8 +18,7 @@ slides <- c('[Link](files/lec1/20e_statistics_lec1.pdf)',
             '[Link](files/lec5/20e_statistics_lec5.pdf)')
 data.frame(Date = c("Jul 24 (Mon)", "Jul 25 (Tue)", "Jul 26 (Wed)", "Jul 27 (Thu)", "Jul 28 (Fri)"),
            Topic = c(day1_topic, day2_topic, day3_topic, day4_topic, day5_topic),
-           Slides = slides,
-           Materials = c("[Link](https://taehoonh.me/CSHLbiostat2023/schedule.html/#Lecture1)")) %>%
+           Slides = slides) %>%
     knitr::kable()
 ```
 
@@ -34,6 +33,11 @@ data.frame(Date = c("Jul 24 (Mon)", "Jul 25 (Tue)", "Jul 26 (Wed)", "Jul 27 (Thu
 <br>
 
 #### Lecture2
+
++ [Arbuthnott](files/lec1/arbuthnott.pzfx)
++ [Flips](flips.pzfx)
++ [Peas](peas.pzfx)
++ [Sex Ratio](sex_ratio.pzfx)
 
 <br>
 
