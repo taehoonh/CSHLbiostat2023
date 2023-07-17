@@ -10,21 +10,41 @@ title: ""
 <br>
 
 
-Contemporary biostatistics and data analysis depends on the mastery of tools for computation, exploratory analysis, visualization, dissemination, and reproducibility, in addition to proficiency in traditional statistical techniques. The goal of this course is to provide training in the elements of a complete pipeline for data analysis. We will develop skills in data wrangling, reproducible research, software development, collaboration, and effective communication; all programming will be done in R. Although there are no formal prerequisites for this course, some familiarity with statistics and basic programming knowledge will be helpful.
+This course is designed to provide an introduction to biostatistics, the application of statistical methods to analyze and interpret data in the field of biology and health sciences. The course will cover the basic principles of probability theory, statistical inference, and hypothesis testing. Participants will learn how to use statistical software, including Prism Graphpad, to analyze datasets and draw conclusions from their findings.
 
-This course is being offered in the Fall of 2022 through the Biostatistics Department at the Columbia School of Public Health; the syllabus is available here [[pdf](resources/P8105_Syllabus.pdf)].
+For registration information, please refer to the [Biostatistics Course Flyer](images/Biostatistics Course Flyer.pdf) for more details.
 
+<br>
 
-### People
+**COURSE OBJECTIVES:**
 
-* Jeff Goldsmith (Instructor; ajg2202)
-* Margaret Gacheru (Lead TA; mg3861)
-* Waveley Qui (In-class TA)
-* Wenhan Bao
-* Yiqun Jin
-* Tanvir Khan
-* Jimmy Kelliher
-* Rachel Li
-* Yangruijue Ma
-* Pooja Mukund
-* Paula Wu
+Understand the basic principles of probability theory, statistical inference, and hypothesis testing.
+Understand how to use **Prism Graphpad** to analyze datasets and draw conclusions from their findings.
+Learn how to use various statistical tests to analyze and interpret data in the field of biology and medical sciences.
+
+Gain an understanding of correlation and regression analysis.
+Prepare participants for more advanced topics in biostatistics.
+
+<br>
+
+**INSTRUCTORS:**
+
+* Justin B. Kinney, PhD
+* Taehoon Ha, MS
+
+<br>
+
+**PREREQUISITES:**
+
+There are no statistical prerequisites for attending this course. Participants must
+have access to a computer and install Prism Graphpad software before attending the course. Please contact [Jessica Peluso](mailto:peluso@cshl.edu) prior to purchasing a license to see if you are eligible for free access to Graphpad!
+
+<br>
+
+**TIME/LOCATION:**
+
++ Date: July 24th-28th, 2023
++ Time: 1-3pm
++ Location: Hawkins
+
+<br>
