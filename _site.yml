@@ -43,8 +43,8 @@ navbar:
 #      href: dataset_restaurant_inspections.html
 #  - text: Homework and Projects
 #    href: homework_and_projects.html
-#  - text: Communication
-#    href: course_communication.html
+  - text: Communication
+    href: communication.html
 #  - icon: fa-github
 #    href: https://github.com/P8105/p8105.github.io
 output:
