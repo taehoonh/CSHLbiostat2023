@@ -2,9 +2,9 @@ name: "CSHL Biostatistics Course 2023"
 output_dir: '.'
 navbar:
   title: Biostatistics Course 2023
-#  right:
-#  - text: Schedule
-#    href: schedule.html
+  right:
+  - text: Schedule
+    href: schedule.html
 #  - text: Topics
 #    menu:
 #    - text: What is Data Science?

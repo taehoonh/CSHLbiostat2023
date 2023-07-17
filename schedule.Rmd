@@ -1,0 +1,11 @@
+---
+title: "Schedule"
+---
+
+<br><br><br>
+
+```{r echo = F, message = F, warning=FALSE}
+library(dplyr)
+data.frame(Date = c("Jul 24 (Mon)", "Jul 25 (Tue)", "Jul 26 (Wed)", "Jul 27 (Thu)", "Jul 28 (Fri)")) %>% knitr::kable()
+```
+
