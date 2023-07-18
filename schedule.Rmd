@@ -22,6 +22,10 @@ smry <- data.frame(Date = c("Jul 24 (Mon)", "Jul 25 (Tue)", "Jul 26 (Wed)", "Jul
     knitr::kable()
 ```
 
+Each course consists of two sections, each comprising a lecture and an activity session with questions. In the first half of the lecture, you will engage in activity 1, while activity 2 will be conducted after the second half of the lecture in each class.
+
+<br>
+
 <style>
   table {
     border-collapse: collapse;
@@ -176,5 +180,3 @@ smry <- data.frame(Date = c("Jul 24 (Mon)", "Jul 25 (Tue)", "Jul 26 (Wed)", "Jul
   </tr>
 </table>
 <br><br><br>
-
-> Each course consists of two sections, each comprising a lecture and an activity session with questions. In the first half of the lecture, you will engage in activity 1, while activity 2 will be conducted after the second half of the lecture in each class.
