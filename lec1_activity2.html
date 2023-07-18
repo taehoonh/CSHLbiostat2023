@@ -11,7 +11,7 @@
 
 
 
-<title>Schedule</title>
+<title>Lecture1 Activity2: Fisher’s Exact Test</title>
 
 <script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,6 +29,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -227,6 +230,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -234,6 +300,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -268,272 +344,130 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Schedule</h1>
+<h1 class="title toc-ignore">Lecture1 Activity2: Fisher’s Exact
+Test</h1>
 
 </div>
 
 
-<p><br><br><br></p>
-<style>
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-
-  th {
-    background-color: #f2f2f2;
-  }
-
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-</style>
+<p><br></p>
+<div id="question-1" class="section level3">
+<h3>Question 1</h3>
+<p>A preliminary study suggests a beneﬁt from green tea for those at
+risk of prostate cancer. The study involved 30 men with PIN lesions,
+some of which turn into prostate cancer. Half the men were randomly
+assigned to 600 mg a day of a green tea extract while the other half
+were given a placebo. The study was double-blind, and the results after
+one year are shown in the table below. Please calculate the expected
+count, and draw a conclusion. Does the sample provide evidence that
+taking green tea extract reduces the risk of developing prostate
+cancer?</p>
 <table>
-<tr>
-<th>
-Date
-</th>
-<th>
-Topic
-</th>
-<th>
-Slides
-</th>
-<th>
-Prism
-</th>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">Cancer</th>
+<th align="right">No Cancer</th>
 </tr>
-<tr>
-<td>
-Jul 24 (Mon)
-</td>
-<td>
-<ul>
-<li>
-Overview of Prism
-</li>
-<li>
-Sensitivity vs. Specificity
-</li>
-<li>
-Contingency Tables
-</li>
-<li>
-Fisher’s Exact Test
-</li>
-</ul>
-</td>
-<td>
-<a href="files/lec1/20e_statistics_lec1.pdf">Download</a>
-</td>
-<td>
-<ul>
-<li>
-<a href="files/lec1/lec1_aip_test.pzfx">AIP test</a>
-</li>
-</ul>
-</td>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Green Tea</td>
+<td align="right">1</td>
+<td align="right">14</td>
 </tr>
-<tr>
-<td>
-Jul 25 (Tue)
-</td>
-<td>
-<ul>
-<li>
-Binomial tests
-</li>
-<li>
-Chi square tests
-</li>
-<li>
-P-values
-</li>
-<li>
-Conﬁdence Intervals
-</li>
-<li>
-Null Hypothesis testing
-</li>
-</ul>
-</td>
-<td>
-<a href="files/lec2/20e_statistics_lec2.pdf">Download</a>
-</td>
-<td>
-<ul>
-<li>
-<a href="files/lec2/arbuthnott.pzfx">Arbuthnott</a>
-</li>
-<li>
-<a href="files/lec2/flips.pzfx">Flips</a>
-</li>
-<li>
-<a href="files/lec2/peas.pzfx">Peas</a>
-</li>
-<li>
-<a href="files/lec2/sex_ratio.pzfx">Sex Ratio</a>
-</li>
-</ul>
-</td>
+<tr class="even">
+<td>Placebo</td>
+<td align="right">4</td>
+<td align="right">11</td>
 </tr>
-<tr>
-<td>
-Jul 26 (Wed)
-</td>
-<td>
-<ul>
-<li>
-Gaussian distributions
-</li>
-<li>
-QQ plots
-</li>
-<li>
-t-tests
-</li>
-<li>
-Comparing two datasets
-</li>
-</ul>
-</td>
-<td>
-<a href="files/lec3/20e_statistics_lec3.pdf">Download</a>
-</td>
-<td>
-<ul>
-<li>
-<a href="files/lec3/bodytemp.pzfx">Body temperature</a>
-</li>
-<li>
-<a href="files/lec3/temp_by_sex.pzfx">Temperature by Sex</a>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>
-Jul 27 (Thu)
-</td>
-<td>
-<ul>
-<li>
-Correlation
-</li>
-<li>
-Power analysis
-</li>
-<li>
-Multiple hypothesis testing
-</li>
-</ul>
-</td>
-<td>
-<a href="files/lec4/20e_statistics_lec4.pdf">Download</a>
-</td>
-<td>
-<ul>
-<li>
-<a href="files/lec4/correlation.pzfx">Correlation</a>
-</li>
-<li>
-<a href="files/lec4/Kinney2014.pdf">Reading material: Kinney 2014</a>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>
-Jul 28 (Fri)
-</td>
-<td>
-<ul>
-<li>
-N-hacking revisited
-</li>
-<li>
-Linear regression
-</li>
-<li>
-Nonlinear regression
-</li>
-<li>
-Analysis of variance (ANOVA)
-</li>
-<li>
-Survival analysis
-</li>
-</ul>
-</td>
-<td>
-<a href="files/lec5/20e_statistics_lec5.pdf">Download</a>
-</td>
-<td>
-<ul>
-<li>
-<a href="files/lec5/linear_regression.pzfx">Linear Regression</a>
-</li>
-<li>
-<a href="files/lec5/nonlinear_regression.pzfx">Non-linear Regression</a>
-</li>
-<li>
-<a href="files/lec5/one-way_anova.pzfx">One-way ANOVA</a>
-</li>
-<li>
-<a href="files/lec5/two-way_anova.pzfx">Two-way ANOVA</a>
-</li>
-<li>
-<a href="files/lec5/survival.pzfx">Survival Analysis</a>
-</li>
-</ul>
-</td>
-</tr>
+</tbody>
 </table>
-<p><br><br><br></p>
-<div id="activities" class="section level3">
-<h3>Activities</h3>
-<div id="lecture-1" class="section level4">
-<h4>Lecture 1</h4>
+<p><br></p>
+<details>
+<summary>
+<strong>Answer to Question 1:</strong>
+</summary>
+<p><br></p>
+<p><strong>1. Determine whether there is an association between green
+tea and prostate cancer</strong></p>
+<p><strong>2. Compute the expected values and see a problem</strong></p>
+<p><span class="math display">\[
+\begin{align*}
+E_{11} &amp;= \frac{5 \times 15}{30} = \frac{75}{30} = 2.5 \\
+E_{12} &amp;= \frac{15 \times 25}{30} = \frac{375}{30} = 12.5 \\
+E_{21} &amp;= \frac{5 \times 15}{30} = \frac{75}{30} = 2.5 \\
+E_{22} &amp;= \frac{15 \times 25}{30} = \frac{375}{30} = 12.5 \\
+\end{align*}
+\]</span></p>
+<p><strong>3. Determine which test to use for your hypothesis
+testing.</strong></p>
+<p>A rule of thumb to use Fisher’s exact test is when analyzing
+contingency tables with small sample sizes or when one or more expected
+cell counts are less or equal to 5.</p>
+<p><strong>4. Draw a conclusion</strong></p>
 <ul>
-<li><a href="lec1_activity1.html">Activity1: Sensitivity
-vs. Specificity</a></li>
-<li><a href="lec1_activity2.html">Activity2: Fisher’s exact
-test</a></li>
+<li>p-value: 0.3295</li>
 </ul>
+<p>Based on the Fisher’s exact test, the p-value of 0.3295 indicates
+that there is no significant evidence to suggest that there is an
+association between taking green tea extract and the risk of developing
+prostate cancer.</p>
+</details>
+<p><br><br></p>
 </div>
-<div id="lecture-2" class="section level4">
-<h4>Lecture 2</h4>
+<div id="question-2" class="section level3">
+<h3>Question 2</h3>
+<p>A study was conducted to investigate the effectiveness of two
+different medications (Medication A and Medication B) in treating a rare
+disease. The data collected from 50 patients are summarized in the
+contingency table below:</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Medication A</th>
+<th>Medication B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Improved</td>
+<td>1</td>
+<td>12</td>
+</tr>
+<tr class="even">
+<td>Not Improved</td>
+<td>7</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<details>
+<summary>
+<strong>Answer to Question 2:</strong>
+</summary>
+<p><br></p>
+<p>To perform a Fisher’s exact test using Prism GraphPad:</p>
+<ol style="list-style-type: decimal">
+<li>Enter the data into the contingency table.</li>
+<li>Select “Analyze” &gt; “Contingency table analysis.”</li>
+<li>In the “Test” section, choose “Fisher’s exact test.”</li>
+<li>Click “OK” to perform the analysis.</li>
+<li>The results of the Fisher’s exact test are as follows:</li>
+</ol>
 <ul>
-<li><a href="lec2_activity1.html">Activity1: Binomial test</a></li>
-<li></li>
+<li>P value: 0.6622 (significant at the alpha level of 0.05)</li>
+<li>Conclusion: The Fisher’s exact test (p-value = 0.6622) does not
+provide significant evidence to suggest a difference in effectiveness
+between Medication A and Medication B in treating the rare disease.
+Therefore, there is no conclusive evidence to favor either medication
+over the other based on the given data.</li>
 </ul>
-</div>
-<div id="lecture-3" class="section level4">
-<h4>Lecture 3</h4>
-<ul>
-<li></li>
-<li></li>
-</ul>
-</div>
-<div id="lecture-4" class="section level4">
-<h4>Lecture 4</h4>
-<ul>
-<li></li>
-<li></li>
-</ul>
-</div>
-<div id="lecture-5" class="section level4">
-<h4>Lecture 5</h4>
-<ul>
-<li></li>
-<li></li>
-</ul>
-</div>
+</details>
+<p><br><br></p>
+<p><a href="schedule.html">&lt; Go Back</a></p>
 </div>
 
 <br><br>
@@ -542,6 +476,8 @@ test</a></li>
 </footer>
 
 
+</div>
+</div>
 
 </div>
 
@@ -574,6 +510,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

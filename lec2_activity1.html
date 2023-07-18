@@ -11,7 +11,7 @@
 
 
 
-<title>Schedule</title>
+<title>Lecture2 Activity1: Binomial Test</title>
 
 <script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,6 +29,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -227,6 +230,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -234,6 +300,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -268,272 +344,96 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Schedule</h1>
+<h1 class="title toc-ignore">Lecture2 Activity1: Binomial Test</h1>
 
 </div>
 
 
-<p><br><br><br></p>
-<style>
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-
-  th {
-    background-color: #f2f2f2;
-  }
-
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-</style>
-<table>
-<tr>
-<th>
-Date
-</th>
-<th>
-Topic
-</th>
-<th>
-Slides
-</th>
-<th>
-Prism
-</th>
-</tr>
-<tr>
-<td>
-Jul 24 (Mon)
-</td>
-<td>
+<p><br></p>
+<div id="question-1" class="section level3">
+<h3>Question 1</h3>
+<p>Let’s say you are conducting a clinical trial to evaluate the
+effectiveness of a new drug in treating a specific medical condition.
+You have a group of 100 patients, and you want to determine if the drug
+has a higher success rate than the standard treatment. Out of the 100
+patients, 75 showed improvement after receiving the new drug. You want
+to test if the proportion of successful outcomes is significantly
+different from the proportion expected under the null hypothesis (e.g.,
+the success rate is the same as the standard treatment, which has a
+success rate of 60%).</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>What is the null &amp; alternative hypothesis?</p></li>
+<li><p>Please analyze the data. Does it appear as though there is a
+significant difference in the success rate between new and standard
+treatment?</p></li>
+</ol>
+<p><br></p>
+<details>
+<summary>
+<strong>Answer to Question 1:</strong>
+</summary>
+<p><br></p>
+<ol style="list-style-type: lower-alpha">
+<li></li>
+</ol>
 <ul>
-<li>
-Overview of Prism
-</li>
-<li>
-Sensitivity vs. Specificity
-</li>
-<li>
-Contingency Tables
-</li>
-<li>
-Fisher’s Exact Test
-</li>
+<li>Null hypothesis: success rate is the same as the standard treatment
+(<span class="math inline">\(\pi_{new}=60%\)</span>).</li>
+<li>Alternative hypothesis: success rate is different. (<span
+class="math inline">\(\pi_{new} \ne 60\)</span>)</li>
 </ul>
-</td>
-<td>
-<a href="files/lec1/20e_statistics_lec1.pdf">Download</a>
-</td>
-<td>
-<ul>
-<li>
-<a href="files/lec1/lec1_aip_test.pzfx">AIP test</a>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>
-Jul 25 (Tue)
-</td>
-<td>
-<ul>
-<li>
-Binomial tests
-</li>
-<li>
-Chi square tests
-</li>
-<li>
-P-values
-</li>
-<li>
-Conﬁdence Intervals
-</li>
-<li>
-Null Hypothesis testing
-</li>
-</ul>
-</td>
-<td>
-<a href="files/lec2/20e_statistics_lec2.pdf">Download</a>
-</td>
-<td>
-<ul>
-<li>
-<a href="files/lec2/arbuthnott.pzfx">Arbuthnott</a>
-</li>
-<li>
-<a href="files/lec2/flips.pzfx">Flips</a>
-</li>
-<li>
-<a href="files/lec2/peas.pzfx">Peas</a>
-</li>
-<li>
-<a href="files/lec2/sex_ratio.pzfx">Sex Ratio</a>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>
-Jul 26 (Wed)
-</td>
-<td>
-<ul>
-<li>
-Gaussian distributions
-</li>
-<li>
-QQ plots
-</li>
-<li>
-t-tests
-</li>
-<li>
-Comparing two datasets
-</li>
-</ul>
-</td>
-<td>
-<a href="files/lec3/20e_statistics_lec3.pdf">Download</a>
-</td>
-<td>
-<ul>
-<li>
-<a href="files/lec3/bodytemp.pzfx">Body temperature</a>
-</li>
-<li>
-<a href="files/lec3/temp_by_sex.pzfx">Temperature by Sex</a>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>
-Jul 27 (Thu)
-</td>
-<td>
-<ul>
-<li>
-Correlation
-</li>
-<li>
-Power analysis
-</li>
-<li>
-Multiple hypothesis testing
-</li>
-</ul>
-</td>
-<td>
-<a href="files/lec4/20e_statistics_lec4.pdf">Download</a>
-</td>
-<td>
-<ul>
-<li>
-<a href="files/lec4/correlation.pzfx">Correlation</a>
-</li>
-<li>
-<a href="files/lec4/Kinney2014.pdf">Reading material: Kinney 2014</a>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td>
-Jul 28 (Fri)
-</td>
-<td>
-<ul>
-<li>
-N-hacking revisited
-</li>
-<li>
-Linear regression
-</li>
-<li>
-Nonlinear regression
-</li>
-<li>
-Analysis of variance (ANOVA)
-</li>
-<li>
-Survival analysis
-</li>
-</ul>
-</td>
-<td>
-<a href="files/lec5/20e_statistics_lec5.pdf">Download</a>
-</td>
-<td>
-<ul>
-<li>
-<a href="files/lec5/linear_regression.pzfx">Linear Regression</a>
-</li>
-<li>
-<a href="files/lec5/nonlinear_regression.pzfx">Non-linear Regression</a>
-</li>
-<li>
-<a href="files/lec5/one-way_anova.pzfx">One-way ANOVA</a>
-</li>
-<li>
-<a href="files/lec5/two-way_anova.pzfx">Two-way ANOVA</a>
-</li>
-<li>
-<a href="files/lec5/survival.pzfx">Survival Analysis</a>
-</li>
-</ul>
-</td>
-</tr>
-</table>
-<p><br><br><br></p>
-<div id="activities" class="section level3">
-<h3>Activities</h3>
-<div id="lecture-1" class="section level4">
-<h4>Lecture 1</h4>
-<ul>
-<li><a href="lec1_activity1.html">Activity1: Sensitivity
-vs. Specificity</a></li>
-<li><a href="lec1_activity2.html">Activity2: Fisher’s exact
-test</a></li>
-</ul>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>The two-sided binomial test yielded a p-value of 0.0021, indicating
+a significant difference in the proportion of successful outcomes
+between the new drug treatment and the standard treatment (60% success
+rate). In conclusion, the new drug treatment demonstrated a superior
+effectiveness compared to the standard treatment.</li>
+</ol>
+</details>
+<p><br><br></p>
 </div>
-<div id="lecture-2" class="section level4">
-<h4>Lecture 2</h4>
+<div id="question-2" class="section level3">
+<h3>Question 2</h3>
+<p>Suppose you are conducting a pre-clinical study to evaluate the
+effectiveness of a potential gene therapy treatment for a genetic
+disorder. In your experiment, you have a group of 50 mice that carry the
+genetic mutation associated with the disorder. You administer the gene
+therapy treatment to all 50 mice and monitor their response.</p>
+<p>After a specified treatment period, you assess the presence or
+absence of symptoms in the mice. Out of the 50 treated mice, 40 show
+improvement and no longer exhibit symptoms associated with the
+disorder.</p>
+<p>Please determine if the gene therapy treatment has a significant
+effect in reducing symptoms compared to the expected proportion.</p>
+<p><br></p>
+<details>
+<summary>
+<strong>Answer to Question 2:</strong>
+</summary>
+<p><br></p>
+<p>To perform a Fisher’s exact test using Prism GraphPad:</p>
+<ol style="list-style-type: decimal">
+<li>Enter the data into the contingency table.</li>
+<li>Select “Analyze” &gt; “Compare observed distribution with
+expected.”</li>
+<li>In the “With two rows, perform” section, choose “Binomial
+test.”</li>
+<li>Please type in your expected #. (Success=25, Fail=25, in this
+case.)</li>
+<li>The results of the binomial test are as follows:</li>
+</ol>
 <ul>
-<li><a href="lec2_activity1.html">Activity1: Binomial test</a></li>
-<li></li>
+<li>P value: &lt;0.0001 (significant at the alpha level of 0.05)</li>
+<li>Conclusion: The binomial test showed a highly significant p-value
+(P&lt;0.0001), indicating a substantial difference in the proportion of
+mice showing improvement after the gene therapy treatment compared to
+the expected proportion under the null hypothesis. It is evident that
+the gene therapy treatment was highly effective in reducing symptoms
+associated with the genetic disorder in the pre-clinical study.</li>
 </ul>
-</div>
-<div id="lecture-3" class="section level4">
-<h4>Lecture 3</h4>
-<ul>
-<li></li>
-<li></li>
-</ul>
-</div>
-<div id="lecture-4" class="section level4">
-<h4>Lecture 4</h4>
-<ul>
-<li></li>
-<li></li>
-</ul>
-</div>
-<div id="lecture-5" class="section level4">
-<h4>Lecture 5</h4>
-<ul>
-<li></li>
-<li></li>
-</ul>
-</div>
+</details>
+<p><br><br></p>
+<p><a href="schedule.html">&lt; Go Back</a></p>
 </div>
 
 <br><br>
@@ -542,6 +442,8 @@ test</a></li>
 </footer>
 
 
+</div>
+</div>
 
 </div>
 
@@ -574,6 +476,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

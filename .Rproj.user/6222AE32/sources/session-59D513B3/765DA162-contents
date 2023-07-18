@@ -152,13 +152,13 @@ smry <- data.frame(Date = c("Jul 24 (Mon)", "Jul 25 (Tue)", "Jul 26 (Wed)", "Jul
 
 #### Lecture 1
 
-+ [Activity1: Sensitivity vs. Specificity](lec1_activity1.html)
-+ [Activity2: Fisher's exact test](lec1_activity2.html)
++ [Activity1](lec1_activity1.html)
++ []
 
 #### Lecture 2
 
-+ [Activity1: Binomial test](lec2_activity1.html)
-+ 
++
++
 
 #### Lecture 3
 
