@@ -1,26 +1,26 @@
 {
-    "id": "CFFE9F12",
-    "path": "~/Documents/github/CSHLbiostat2023/lec2_activity2.Rmd",
-    "project_path": "lec2_activity2.Rmd",
+    "id": "5EF145D2",
+    "path": "~/Documents/github/CSHLbiostat2023/schedule.Rmd",
+    "project_path": "schedule.Rmd",
     "type": "r_markdown",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1689653971565.0,
+    "created": 1689654361907.0,
     "source_on_save": false,
     "relative_order": 2,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "9,14",
-        "scrollLine": "0"
+        "cursorPosition": "92,47",
+        "scrollLine": "86"
     },
     "folds": "",
-    "lastKnownWriteTime": 1689650279,
+    "lastKnownWriteTime": 1689653481,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1689650279,
+    "last_content_update": 1689653481,
     "read_only": false,
     "read_only_alternatives": []
 }
