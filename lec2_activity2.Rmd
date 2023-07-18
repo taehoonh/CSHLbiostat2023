@@ -7,14 +7,16 @@ output:
 ---
 <br>
 
-### Question 1
+### Question 1: The Association between Gene Mutation and Lung Cancer (2x2 table)
 
-Let's say you are conducting a clinical trial to evaluate the effectiveness of a new drug in treating a specific medical condition. You have a group of 100 patients, and you want to determine if the drug has a higher success rate than the standard treatment. Out of the 100 patients, 75 showed improvement after receiving the new drug. You want to test if the proportion of successful outcomes is significantly different from the proportion expected under the null hypothesis (e.g., the success rate is the same as the standard treatment, which has a success rate of 60%).
+A biomedical study was conducted to examine whether there is an association between a specific gene mutation (Gene X) and lung cancer occurrence. The researchers collected the following data:
 
-a) What is the null & alternative hypothesis?
+|                  | Cancer Present | Cancer Absent |
+|------------------|----------------|---------------|
+| Mutation Present |       45       |       30      |
+| Mutation Absent  |       20       |      105      |
 
-b) Please analyze the data. Does it appear as though there is a significant difference in the success rate between new and standard treatment?
-
+Is there a significant association between the mutation in Gene X and the occurrence of lung cancer? Please report your test statistic, the degrees of freedom, the p-value, and your interpretation of the result.
 
 <br>
 
@@ -23,23 +25,45 @@ b) Please analyze the data. Does it appear as though there is a significant diff
   
 <br>
 
-a) 
-+ Null hypothesis: success rate is the same as the standard treatment ($\pi_{new}=60%$).
-+ Alternative hypothesis: success rate is different. ($\pi_{new} \ne 60$)
++ Test statistic: 41.37
++ Degree of freedom: 1
++ p-value: P<0.0001
++ Conclusion: The results of Chi-squared test indicate a significant association between the variables (cancer presence and mutation presence/absence). The calculated chi-squared value was 39.386 with 1 degree of freedom, resulting in a very low p-value (P<0.0001). These findings provide strong evidence to reject the null hypothesis and suggest a significant association between the mutation and the occurrence of cancer.
 
+<br>
+**(Manual calculation)**
 
-b) The two-sided binomial test yielded a p-value of 0.0021, indicating a significant difference in the proportion of successful outcomes between the new drug treatment and the standard treatment (60% success rate). In conclusion, the new drug treatment demonstrated a superior effectiveness compared to the standard treatment.
+The first step in solving a Chi-squared problem is to calculate the expected counts. For a 2x2 table, this can be done by taking (row total * column total) / grand total for each cell.
+
+For the "Mutation Present and Cancer Present" cell, the expected count would be (75 * 65) / 200 = 24.375
+For the "Mutation Present and Cancer Absent" cell, the expected count would be (75 * 135) / 200 = 50.625
+For the "Mutation Absent and Cancer Present" cell, the expected count would be (125 * 65) / 200 = 40.625
+For the "Mutation Absent and Cancer Absent" cell, the expected count would be (125 * 135) / 200 = 84.375
+
+The test statistic is calculated as the sum of (observed-expected)^2/expected over all cells.
+
+Chi-squared = (45-24.375)^2/24.375 + (30-50.625)^2/50.625 + (20-40.625)^2/40.625 + (105-84.375)^2/84.375 = 20.589
+
+In a 2x2 table, the degrees of freedom are (2-1)(2-1) = 1
+
+Using a Chi-squared distribution table, we can compare our test statistic with the critical value for our degrees of freedom (which is 3.841 for α = 0.05). Since our test statistic is greater than the critical value, we reject the null hypothesis that gene mutation and cancer occurrence are independent.
+
 
 </details>
 <br><br>
 
-### Question 2
+### Question 2: Exploring the Relationship between Cancer Type and Genetic Variants (RxC table)
 
-Suppose you are conducting a pre-clinical study to evaluate the effectiveness of a potential gene therapy treatment for a genetic disorder. In your experiment, you have a group of 50 mice that carry the genetic mutation associated with the disorder. You administer the gene therapy treatment to all 50 mice and monitor their response.
+A comprehensive genomics study was performed to understand if there is a significant association between four different types of cancer (Lung, Breast, Colorectal, and Prostate) and the presence of five distinct genetic variants (Variant A, B, C, D, E). The following data was collected:
 
-After a specified treatment period, you assess the presence or absence of symptoms in the mice. Out of the 50 treated mice, 40 show improvement and no longer exhibit symptoms associated with the disorder.
+|                     | Variant A | Variant B | Variant C | Variant D | Variant E |
+|---------------------|-----------|-----------|-----------|-----------|-----------|
+| Lung Cancer         |    32     |    40     |    45     |    38     |    35     |
+| Breast Cancer       |    35     |    38     |    50     |    33     |    34     |
+| Colorectal Cancer   |    40     |    42     |    55     |    50     |    60     |
+| Prostate Cancer     |    50     |    48     |    45     |    55     |    52     |
 
-Please determine if the gene therapy treatment has a significant effect in reducing symptoms compared to the expected proportion.
+Is there a significant association between the mutation in Gene X and the occurrence of lung cancer? Please report your test statistic, the degrees of freedom, the p-value, and your interpretation of the result.
 
 <br>
 
@@ -48,16 +72,10 @@ Please determine if the gene therapy treatment has a significant effect in reduc
   
 <br>
 
-To perform a Fisher's exact test using Prism GraphPad:
-
-1. Enter the data into the contingency table.
-2. Select "Analyze" > "Compare observed distribution with expected."
-3. In the "With two rows, perform" section, choose "Binomial test."
-4. Please type in your expected #. (Success=25, Fail=25, in this case.)
-5. The results of the binomial test are as follows:
-
-+ P value: <0.0001 (significant at the alpha level of 0.05)
-+ Conclusion: The binomial test showed a highly significant p-value (P<0.0001), indicating a substantial difference in the proportion of mice showing improvement after the gene therapy treatment compared to the expected proportion under the null hypothesis. It is evident that the gene therapy treatment was highly effective in reducing symptoms associated with the genetic disorder in the pre-clinical study.
++ Test statistic: 9.714
++ Degree of freedom: 12
++ p-value: 0.6410
++ Conclusion: The Chi-squared test result yielded a p-value of 0.6410, which is greater than the significance level of 0.05. This indicates no significant association between the type of cancer and the genetic variants in our sample.
 
 </details>
 <br><br>

@@ -358,86 +358,163 @@ div.tocify {
 
 
 <p><br></p>
-<div id="question-1" class="section level3">
-<h3>Question 1</h3>
-<p>Let’s say you are conducting a clinical trial to evaluate the
-effectiveness of a new drug in treating a specific medical condition.
-You have a group of 100 patients, and you want to determine if the drug
-has a higher success rate than the standard treatment. Out of the 100
-patients, 75 showed improvement after receiving the new drug. You want
-to test if the proportion of successful outcomes is significantly
-different from the proportion expected under the null hypothesis (e.g.,
-the success rate is the same as the standard treatment, which has a
-success rate of 60%).</p>
-<ol style="list-style-type: lower-alpha">
-<li><p>What is the null &amp; alternative hypothesis?</p></li>
-<li><p>Please analyze the data. Does it appear as though there is a
-significant difference in the success rate between new and standard
-treatment?</p></li>
-</ol>
+<div
+id="question-1-the-association-between-gene-mutation-and-lung-cancer-2x2-table"
+class="section level3">
+<h3>Question 1: The Association between Gene Mutation and Lung Cancer
+(2x2 table)</h3>
+<p>A biomedical study was conducted to examine whether there is an
+association between a specific gene mutation (Gene X) and lung cancer
+occurrence. The researchers collected the following data:</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Cancer Present</th>
+<th>Cancer Absent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mutation Present</td>
+<td>45</td>
+<td>30</td>
+</tr>
+<tr class="even">
+<td>Mutation Absent</td>
+<td>20</td>
+<td>105</td>
+</tr>
+</tbody>
+</table>
+<p>Is there a significant association between the mutation in Gene X and
+the occurrence of lung cancer? Please report your test statistic, the
+degrees of freedom, the p-value, and your interpretation of the
+result.</p>
 <p><br></p>
 <details>
 <summary>
 <strong>Answer to Question 1:</strong>
 </summary>
 <p><br></p>
-<ol style="list-style-type: lower-alpha">
-<li></li>
-</ol>
 <ul>
-<li>Null hypothesis: success rate is the same as the standard treatment
-(<span class="math inline">\(\pi_{new}=60%\)</span>).</li>
-<li>Alternative hypothesis: success rate is different. (<span
-class="math inline">\(\pi_{new} \ne 60\)</span>)</li>
+<li>Test statistic: 41.37</li>
+<li>Degree of freedom: 1</li>
+<li>p-value: P&lt;0.0001</li>
+<li>Conclusion: The results of Chi-squared test indicate a significant
+association between the variables (cancer presence and mutation
+presence/absence). The calculated chi-squared value was 39.386 with 1
+degree of freedom, resulting in a very low p-value (P&lt;0.0001). These
+findings provide strong evidence to reject the null hypothesis and
+suggest a significant association between the mutation and the
+occurrence of cancer.</li>
 </ul>
-<ol start="2" style="list-style-type: lower-alpha">
-<li>The two-sided binomial test yielded a p-value of 0.0021, indicating
-a significant difference in the proportion of successful outcomes
-between the new drug treatment and the standard treatment (60% success
-rate). In conclusion, the new drug treatment demonstrated a superior
-effectiveness compared to the standard treatment.</li>
-</ol>
+<p><br> <strong>(Manual calculation)</strong></p>
+<p>The first step in solving a Chi-squared problem is to calculate the
+expected counts. For a 2x2 table, this can be done by taking (row total
+* column total) / grand total for each cell.</p>
+<p>For the “Mutation Present and Cancer Present” cell, the expected
+count would be (75 * 65) / 200 = 24.375 For the “Mutation Present and
+Cancer Absent” cell, the expected count would be (75 * 135) / 200 =
+50.625 For the “Mutation Absent and Cancer Present” cell, the expected
+count would be (125 * 65) / 200 = 40.625 For the “Mutation Absent and
+Cancer Absent” cell, the expected count would be (125 * 135) / 200 =
+84.375</p>
+<p>The test statistic is calculated as the sum of
+(observed-expected)^2/expected over all cells.</p>
+<p>Chi-squared = (45-24.375)^2/24.375 + (30-50.625)^2/50.625 +
+(20-40.625)^2/40.625 + (105-84.375)^2/84.375 = 20.589</p>
+<p>In a 2x2 table, the degrees of freedom are (2-1)(2-1) = 1</p>
+<p>Using a Chi-squared distribution table, we can compare our test
+statistic with the critical value for our degrees of freedom (which is
+3.841 for α = 0.05). Since our test statistic is greater than the
+critical value, we reject the null hypothesis that gene mutation and
+cancer occurrence are independent.</p>
 </details>
 <p><br><br></p>
 </div>
-<div id="question-2" class="section level3">
-<h3>Question 2</h3>
-<p>Suppose you are conducting a pre-clinical study to evaluate the
-effectiveness of a potential gene therapy treatment for a genetic
-disorder. In your experiment, you have a group of 50 mice that carry the
-genetic mutation associated with the disorder. You administer the gene
-therapy treatment to all 50 mice and monitor their response.</p>
-<p>After a specified treatment period, you assess the presence or
-absence of symptoms in the mice. Out of the 50 treated mice, 40 show
-improvement and no longer exhibit symptoms associated with the
-disorder.</p>
-<p>Please determine if the gene therapy treatment has a significant
-effect in reducing symptoms compared to the expected proportion.</p>
+<div
+id="question-2-exploring-the-relationship-between-cancer-type-and-genetic-variants-rxc-table"
+class="section level3">
+<h3>Question 2: Exploring the Relationship between Cancer Type and
+Genetic Variants (RxC table)</h3>
+<p>A comprehensive genomics study was performed to understand if there
+is a significant association between four different types of cancer
+(Lung, Breast, Colorectal, and Prostate) and the presence of five
+distinct genetic variants (Variant A, B, C, D, E). The following data
+was collected:</p>
+<table>
+<colgroup>
+<col width="27%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Variant A</th>
+<th>Variant B</th>
+<th>Variant C</th>
+<th>Variant D</th>
+<th>Variant E</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lung Cancer</td>
+<td>32</td>
+<td>40</td>
+<td>45</td>
+<td>38</td>
+<td>35</td>
+</tr>
+<tr class="even">
+<td>Breast Cancer</td>
+<td>35</td>
+<td>38</td>
+<td>50</td>
+<td>33</td>
+<td>34</td>
+</tr>
+<tr class="odd">
+<td>Colorectal Cancer</td>
+<td>40</td>
+<td>42</td>
+<td>55</td>
+<td>50</td>
+<td>60</td>
+</tr>
+<tr class="even">
+<td>Prostate Cancer</td>
+<td>50</td>
+<td>48</td>
+<td>45</td>
+<td>55</td>
+<td>52</td>
+</tr>
+</tbody>
+</table>
+<p>Is there a significant association between the mutation in Gene X and
+the occurrence of lung cancer? Please report your test statistic, the
+degrees of freedom, the p-value, and your interpretation of the
+result.</p>
 <p><br></p>
 <details>
 <summary>
 <strong>Answer to Question 2:</strong>
 </summary>
 <p><br></p>
-<p>To perform a Fisher’s exact test using Prism GraphPad:</p>
-<ol style="list-style-type: decimal">
-<li>Enter the data into the contingency table.</li>
-<li>Select “Analyze” &gt; “Compare observed distribution with
-expected.”</li>
-<li>In the “With two rows, perform” section, choose “Binomial
-test.”</li>
-<li>Please type in your expected #. (Success=25, Fail=25, in this
-case.)</li>
-<li>The results of the binomial test are as follows:</li>
-</ol>
 <ul>
-<li>P value: &lt;0.0001 (significant at the alpha level of 0.05)</li>
-<li>Conclusion: The binomial test showed a highly significant p-value
-(P&lt;0.0001), indicating a substantial difference in the proportion of
-mice showing improvement after the gene therapy treatment compared to
-the expected proportion under the null hypothesis. It is evident that
-the gene therapy treatment was highly effective in reducing symptoms
-associated with the genetic disorder in the pre-clinical study.</li>
+<li>Test statistic: 9.714</li>
+<li>Degree of freedom: 12</li>
+<li>p-value: 0.6410</li>
+<li>Conclusion: The Chi-squared test result yielded a p-value of 0.6410,
+which is greater than the significance level of 0.05. This indicates no
+significant association between the type of cancer and the genetic
+variants in our sample.</li>
 </ul>
 </details>
 <p><br><br></p>
