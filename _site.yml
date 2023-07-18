@@ -45,8 +45,8 @@ navbar:
 #    href: homework_and_projects.html
   - text: Communication
     href: communication.html
-#  - icon: fa-github
-#    href: https://github.com/P8105/p8105.github.io
+  - icon: fa-github
+    href: https://github.com/taehoonh/CSHLbiostat2023
 output:
   html_document:
     theme: cosmo

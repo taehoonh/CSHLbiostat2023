@@ -1,0 +1,18 @@
+---
+title: "Untitled"
+author: "Taehoon Ha"
+date: "2023-07-18"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(hexSticker)
+imgurl <- system.file("cshl_logo_alternate_RGB.png", package="hexSticker")
+sticker(imgurl, package="hexSticker", p_size=20, s_x=1, s_y=.75, s_width=.6,
+        filename="inst/figures/imgfile.png")
+```
+
