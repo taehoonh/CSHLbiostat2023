@@ -1,5 +1,5 @@
 name: "CSHL Biostatistics Course 2023"
-output_dir: '.'
+output_dir: 'http://taehoonh.me/CSHLbiostat2023/.'
 navbar:
   title: Biostatistics Course 2023
   right:
