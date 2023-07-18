@@ -1,5 +1,5 @@
 ---
-title: "Lecture2 Activity1: Binomial Test"
+title: "Lecture2 Activity2: Chi-squared test"
 output:
   html_document: 
     toc: true
