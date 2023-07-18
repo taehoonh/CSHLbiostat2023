@@ -41,13 +41,13 @@ smry <- data.frame(Date = c("Jul 24 (Mon)", "Jul 25 (Tue)", "Jul 26 (Wed)", "Jul
     background-color: #f9f9f9;
   }
 </style>
-
 <table>
   <tr>
     <th>Date</th>
     <th>Topic</th>
     <th>Slides</th>
     <th>Prism</th>
+    <th>Activities</th>
   </tr>
   <tr>
     <td>Jul 24 (Mon)</td>
@@ -63,6 +63,12 @@ smry <- data.frame(Date = c("Jul 24 (Mon)", "Jul 25 (Tue)", "Jul 26 (Wed)", "Jul
     <td>
       <ul>
         <li><a href="files/lec1/lec1_aip_test.pzfx">AIP test</a></li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="lec1_activity1.html">Activity 1</a></li>
+        <li><a href="lec1_activity2.html">Activity 2</a></li>
       </ul>
     </td>
   </tr>
@@ -86,6 +92,12 @@ smry <- data.frame(Date = c("Jul 24 (Mon)", "Jul 25 (Tue)", "Jul 26 (Wed)", "Jul
         <li><a href="files/lec2/sex_ratio.pzfx">Sex Ratio</a></li>
       </ul>
     </td>
+    <td>
+      <ul>
+        <li><a href="lec2_activity1.html">Activity 1</a></li>
+        <li><a href="lec2_activity2.html">Activity 2</a></li>
+      </ul>
+    </td>
   </tr>
   <tr>
     <td>Jul 26 (Wed)</td>
@@ -104,6 +116,12 @@ smry <- data.frame(Date = c("Jul 24 (Mon)", "Jul 25 (Tue)", "Jul 26 (Wed)", "Jul
         <li><a href="files/lec3/temp_by_sex.pzfx">Temperature by Sex</a></li>
       </ul>
     </td>
+    <td>
+      <ul>
+        <li><a href="lec3_activity1.html">Activity 1</a></li>
+        <li><a href="lec3_activity2.html">Activity 2</a></li>
+      </ul>
+    </td>
   </tr>
   <tr>
     <td>Jul 27 (Thu)</td>
@@ -119,6 +137,12 @@ smry <- data.frame(Date = c("Jul 24 (Mon)", "Jul 25 (Tue)", "Jul 26 (Wed)", "Jul
       <ul>
         <li><a href="files/lec4/correlation.pzfx">Correlation</a></li>
         <li><a href="files/lec4/Kinney2014.pdf">Reading material: Kinney 2014</a></li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li><a href="lec4_activity1.html">Activity 1</a></li>
+        <li><a href="lec4_activity2.html">Activity 2</a></li>
       </ul>
     </td>
   </tr>
@@ -143,35 +167,13 @@ smry <- data.frame(Date = c("Jul 24 (Mon)", "Jul 25 (Tue)", "Jul 26 (Wed)", "Jul
         <li><a href="files/lec5/survival.pzfx">Survival Analysis</a></li>
       </ul>
     </td>
+    <td>
+      <ul>
+        <li><a href="lec5_activity1.html">Activity 1</a></li>
+        <li><a href="lec5_activity2.html">Activity 2</a></li>
+      </ul>
+    </td>
   </tr>
 </table>
-
 <br><br><br>
-
-### Activities
-
-#### Lecture 1
-
-+ [Activity1: Sensitivity vs. Specificity](lec1_activity1.html)
-+ [Activity2: Fisher's exact test](lec1_activity2.html)
-
-#### Lecture 2
-
-+ [Activity1: Binomial test](lec2_activity1.html)
-+ 
-
-#### Lecture 3
-
-+
-+
-
-#### Lecture 4
-
-+
-+
-
-#### Lecture 5
-
-+
-+
 
