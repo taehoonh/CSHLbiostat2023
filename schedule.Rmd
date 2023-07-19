@@ -133,6 +133,7 @@ Each lecture consists of two sections, each comprising one lecture and one activ
       <ul>
         <li>Correlation</li>
         <li>Power analysis</li>
+        <li>Analysis of variance (ANOVA)</li>
         <li>Multiple hypothesis testing</li>
       </ul>
     </td>
@@ -140,6 +141,8 @@ Each lecture consists of two sections, each comprising one lecture and one activ
     <td>
       <ul>
         <li><a href="files/lec4/correlation.pzfx">Correlation</a></li>
+        <li><a href="files/lec4/one-way_anova.pzfx">One-way ANOVA</a></li>
+        <li><a href="files/lec4/two-way_anova.pzfx">Two-way ANOVA</a></li>
         <li><a href="files/lec4/Kinney2014.pdf">Reading material: Kinney 2014</a></li>
       </ul>
     </td>
@@ -154,10 +157,8 @@ Each lecture consists of two sections, each comprising one lecture and one activ
     <td>Jul 28 (Fri)</td>
     <td>
       <ul>
-        <li>N-hacking revisited</li>
         <li>Linear regression</li>
         <li>Nonlinear regression</li>
-        <li>Analysis of variance (ANOVA)</li>
         <li>Survival analysis</li>
       </ul>
     </td>
@@ -166,8 +167,6 @@ Each lecture consists of two sections, each comprising one lecture and one activ
       <ul>
         <li><a href="files/lec5/linear_regression.pzfx">Linear Regression</a></li>
         <li><a href="files/lec5/nonlinear_regression.pzfx">Non-linear Regression</a></li>
-        <li><a href="files/lec5/one-way_anova.pzfx">One-way ANOVA</a></li>
-        <li><a href="files/lec5/two-way_anova.pzfx">Two-way ANOVA</a></li>
         <li><a href="files/lec5/survival.pzfx">Survival Analysis</a></li>
       </ul>
     </td>
