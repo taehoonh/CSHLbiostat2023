@@ -11,7 +11,7 @@
 
 
 
-<title>Lecture3 Activity1:</title>
+<title>Lecture3 Activity2: t-test</title>
 
 <script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -352,31 +352,122 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Lecture3 Activity1:</h1>
+<h1 class="title toc-ignore">Lecture3 Activity2: t-test</h1>
 
 </div>
 
 
 <p><br></p>
-<div id="question-1" class="section level3">
-<h3>Question 1</h3>
+<div id="question-1-one-sample-t-test" class="section level3">
+<h3>Question 1: One-sample t-test</h3>
+<p>The mean systolic blood pressure of U.S. adults who are 40-59 years
+of age is 123 mm Hg with a standard deviation of 23 mm Hg.</p>
+<p>Suppose we take a random sample of size 12 from the a population of
+patients seen at a rural clinic and measure the SBP. We want to know
+whether our sample indicates that this population is from normal tensive
+individuals or hypertensive individuals. Do we have evidence that the
+data are from a population of patients that are not normal tensive?</p>
+<p>Here is our data: 179.2, 173.1, 168.8, 132, 136.8, 119.2, 141.6,
+129.1, 127.3, 96.9, 195.8, 133.4</p>
+<p>You can download the data <a href="files/lec3/sbp.pzfx">HERE</a>.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>What are the null and alternative hypothesis?</p></li>
+<li><p>Please report your test statistic.</p></li>
+<li><p>Please present your conclusion from the hypothesis
+testing.</p></li>
+</ol>
 <p><br></p>
 <details>
 <summary>
 <strong>Answer to Question 1:</strong>
 </summary>
 <p><br></p>
+<p><strong>5 stpes of hypothesis testing</strong>:</p>
+<ol style="list-style-type: decimal">
+<li><p>Decide on the effect that you want to study. Select a suitable
+test statistic to measure the eﬀect.</p></li>
+<li><p>Set up a null hypothesis, which is a simple, tractable model that
+allows you to compute the null distribution.</p></li>
+<li><p>Decide on the rejection region, i.e., if the test is one-sided or
+two-sided. This could in theory be generated in advance based on a known
+sample size.</p></li>
+<li><p>Do the experiment, collect the data, and compute the observed
+value of the test statistic.</p></li>
+<li><p>Make a decision: reject the null hypothesis if the test statistic
+is in the rejection region, i.e., if the p-value is smaller than the
+significance level.</p></li>
+</ol>
+<p><br></p>
+<p><strong>a) Null and alternative hypotheses:</strong></p>
+<p>Null Hypothesis (<span class="math inline">\(H_0\)</span>): The
+actual mean systolic blood pressure is equal to the theoretical mean
+systolic blood pressure (<span class="math inline">\(\mu =
+123.0\)</span>).</p>
+<p>Alternative Hypothesis (<span class="math inline">\(H_1\)</span>):
+The actual mean systolic blood pressure is significantly different from
+the theoretical mean systolic blood pressure (<span
+class="math inline">\(\mu \ne 123.0\)</span>).</p>
+<p><br></p>
+<p><strong>b) Test statistic:</strong></p>
+<p>The t-statistic calculated from the analysis was 2.585.</p>
+<p><br></p>
+<p><strong>c) Conclusion of hypothesis testing:</strong></p>
+<p>It appears as though the patient population at the rural clinic on
+average is not normal tensive (p-value = 0.0254). The average SBP was
+higher than the mean normal tensive level for the general population,
+<span class="math inline">\(\bar{x} = 144.4\)</span>, which indicates
+the population is hypertesive on average (hypertension is a value of 140
+or higher).</p>
 </details>
 <p><br><br></p>
 </div>
-<div id="question-2" class="section level3">
-<h3>Question 2</h3>
+<div id="question-2-two-sample-t-test" class="section level3">
+<h3>Question 2: Two-sample t-test</h3>
+<p>A group of researchers is investigating the effects of a potential
+cancer treatment on the expression levels of a specific gene, “Gene Y.”
+They collected expression data from two groups: a control group and a
+treatment group. The control group consists of 25 mice with cancer that
+did not receive the treatment, while the treatment group consists of 30
+mice with cancer that underwent the treatment. The researchers want to
+determine if there is a significant difference in the mean expression
+levels of Gene Y between the two groups. Using a two-sample t-test,
+analyze the provided dataset and determine if there is evidence of a
+significant difference in gene expression between the control and
+treatment groups. Use a significance level of 0.05.</p>
+<p>You can download the data <a href="files/lec3/geneY.pzfx">HERE</a>.
+In your analysis, please do not assume eqaul SDs.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>What are the null and alternative hypothesis?</p></li>
+<li><p>Please report your test statistic.</p></li>
+<li><p>Please present your conclusion from the hypothesis
+testing.</p></li>
+</ol>
 <p><br></p>
 <details>
 <summary>
 <strong>Answer to Question 2:</strong>
 </summary>
 <p><br></p>
+<p><strong>a) Null and alternative hypotheses:</strong></p>
+<p>Null hypothesis (<span class="math inline">\(H_0\)</span>): The mean
+expression levels of Gene Y are equal between the control group (mice
+with cancer that did not receive the treatment) and the treatment group
+(mice with cancer that underwent the treatment). (i.e., <span
+class="math inline">\(\mu_{Ctrl} = \mu_{Trmt}\)</span>)</p>
+<p>Alternative hypothesis (<span class="math inline">\(H_1\)</span>):
+There is a significant difference in the mean expression levels of Gene
+Y between the control group and the treatment group. (i.e., <span
+class="math inline">\(\mu_{Ctrl} \ne \mu_{Trmt}\)</span>)</p>
+<p><br></p>
+<p><strong>b) Test statistic:</strong></p>
+<p>The t-statistic calculated from the analysis was 3.980.</p>
+<p><br></p>
+<p><strong>c) Conclusion of hypothesis testing:</strong></p>
+<p>The analysis indicates a significant difference in the mean
+expression levels of Gene Y between the control and treatment groups of
+mice with cancer (p=0.002). The treatment group exhibited significantly
+higher expression levels (mean difference: 1.724) compared to the
+control group.</p>
 </details>
 <p><br><br></p>
 <p><a href="schedule.html">&lt; Go Back</a></p>

@@ -1,0 +1,21 @@
+---
+title: "Untitled"
+author: "Taehoon Ha"
+date: "2023-07-20"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+ctrl <- c(rnorm(25, 2, 1) + rnorm(25, 0, 0.25), rep(NA, 5))
+trmt <- abs(rnorm(30, 4, 2.5) + rnorm(30, 0, 0.25))
+
+dat <- data.frame(Control = ctrl, Treatment = trmt, row.names = NULL)
+write.csv(dat, "test.csv", row.names = F)
+
+t.test(dat$Control, dat$Treatment)
+```
+
