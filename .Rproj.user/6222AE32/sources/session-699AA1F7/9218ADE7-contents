@@ -106,45 +106,4 @@ The analysis indicates a significant difference in the mean expression levels of
 </details>
 <br><br>
 
-### Question 3: Paired t-test
-
-Researchers conducted a clinical trial to investigate the effectiveness of a new drug treatment for patients with high blood pressure. The study involved 40 patients who received the new drug treatment and were followed up after a certain period of time. Systolic blood pressure measurements were recorded for each patient both before and after the treatment.
-
-Using the provided dataset, please perform a paired t-test to determine if there is a significant difference in systolic blood pressure before and after administering the new drug treatment. Calculate the t-statistic, degrees of freedom, and p-value, and provide a brief interpretation of the results.
-
-You can download the data [HERE](files/lec3/bloodpressure.pzfx). In your analysis, please do not assume eqaul SDs.
-
-a) What are the null and alternative hypothesis?
-
-b) Please report your test statistic.
-
-c) Please present your conclusion from the hypothesis testing.
-
-<br>
-
-<details>
-  <summary><strong>Answer to Question 3:</strong></summary>
-  
-<br>
-
-**a) Null and alternative hypotheses:**
-
-Null hypothesis ($H_0$): There is no significant difference in systolic blood pressure before and after administering the new drug treatment. (i.e., $\mu_{before} = \mu_{after}$)
-
-Alternative hypothesis ($H_1$): There is a significant difference in systolic blood pressure before and after administering the new drug treatment. (i.e., $\mu_{before} \ne \mu_{after}$)
-
-<br>
-
-**b) Test statistic:**
-
-The t-statistic calculated from the analysis was 24.61.
-
-<br>
-
-**c) Conclusion of hypothesis testing:**
-
-The result of the paired t-test indicates a significant difference in systolic blood pressure before and after administering the new drug treatment (p<0.0001). Therefore, we reject the null hypothesis and conclude that the treatment has a significant effect on systolic blood pressure.
-
-</details>
-<br><br>
 <a href="schedule.html">< Go Back</a>
