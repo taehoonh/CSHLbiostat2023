@@ -1,0 +1,140 @@
+---
+title: "Lecture 2 - Computing Lab"
+author: "Xi Kathy Zhou, PhD"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output: 
+    html_document:
+        md_extensions: -startnum
+        toc: true
+        toc_float: 
+          collapsed: true
+          smooth_scroll: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Linear regression with a categorical variable
+The following exercises help you understand the use of linear model function `lm()` in R , its output components, related functions and their implementations. 
+
+Use the R function `lm` to analyze the mouse ear thickness data. Example code is written below.
+
+```
+out ~ lm (Thickness ~ Treatment, data=dat_EarThickness)
+```
+
+Experiment with extracting useful information from the analysis results by doing the following exercise:
+
+1. Print out the output from the linear regression. 
+
+2. Examine the components of the regression output using `name(out)`, print out the values kept in the first three components.
+
+3. Print out the summary of the linear regression output using `summary(out)`.
+
+4. Examine the components of the regression output using `name(summary(out))`, what are the difference and similarities between the components of `out` and components of `summary(out)`.
+
+5. Read the source code of function `lm`, `summary.lm`, `print.lm`, and `print.summary.lm` and answer the following questions: 
+    
+    5.1 Based on the source code of `lm` function, which funtion it calls to fit the linear regression model when there is no weight supplied?
+    
+    5.2 Based on the source code of `summary.lm`, what are the components of variable `ans`?
+    
+    5.3 Copy the source code of `print.lm` to another function named `my.print.lm`. In this new function, modify the value of `print.gap` to *3L*. Apply this new function to the linear regression output, what do you get?
+    
+    5.4 Based on the source code of `print.summary.lm`, what is `x$fstatistic`? What is the code used for calculating the p-values related to the F-statistic?
+
+## ANOVA
+The following exercises help you understand the use of R function `anova()`, its output components, related functions and their implementations. 
+
+Apply one-way ANOVA to analyze the mouse ear thickness data. Example code is shown below.
+
+```
+out.anova <- anova(out)
+```
+Experiment with extracting useful information from the analysis results.
+
+1. Print out the output from the above analysis.  
+
+2. Examine the components of the ANOVA output using `name(out.anova)`. Print out the values kept in the final component.
+
+3. Read the source code for the `anova` function we used in this class. Use `methods(anova)` to list the different R implementations of ANOVA methods. Read the source code of `anova.lm` and `print.anova` and answer the following questions:
+
+    3.1 Based on the source code of `anova.lm`, what is the value of variable *ss* when we use the cell means model? What is the value of variable *ss* when we use the effects model with treatment contrast coding? 
+    
+    3.2 Based on the source code of `print.anova`, what is the value of variable *cn* given your anova analysis.
+    
+## Kruskal-Wallis test
+
+1. Apply Kruskal-Wallis test to the mouse ear thickness data. 
+
+2. (optional) Round the ear thickness data to whole numbers and run the Kruskal-Wallis test again. Examine the test statistic. Is the test statistic corrected for ties?
+
+## Write R functions
+
+Write a wrapper function based on `lm` and `anova` in R to compare continuous data in multiple groups. This function should have the following capabilities:
+
+1. Take the multi-group data (with number of groups>2) as the input (similar to the input for the `lm` function)
+
+2. Output all the important summary statistics into a table that can be readily displayed properly in an analysis report. The summary statistics should include number of experimental units in each group, number of experimental units with complete measurements in each group, mean and standard deviation (SD) of the outcome in each group, p-value from ANOVA, the median and inter-quartile range (IQR) or range for each group, p-value from the Kruskal-Wallis test.
+
+3. (optional) Generate summary plot (bar-error plot and box-plot).
+
+4. (optional) Generate results from the tests on normality and heteroscedasticity.
+
+Use this function to analyze the mouse UV study data and summarize the data and analysis results numerically and graphically.
+
+## Linear contrasts
+Learn to use `glht` function in `multcomp` package to assess comparisons of means of interest.
+
+Evaluate the following contrasts using `glht`.
+
+```{r, echo=FALSE, results="asis"}
+C <- rbind("LowDose vs. NormalFood" = c(-1,1,0,0),
+           "MedDose vs. NormalFood" = c(-1,0,1,0),
+           "HighDose vs. NormalFood" =c(-1,0,0,1))
+colnames(C) <- c("y~1.~", "y~2.~", "y~3.~", "y~4.~")
+
+knitr::kable(C)
+```
+
+```
+library(multcomp)
+out <- lm(EarThickness ~ Treatment-1, data=dat_EarThickness)
+C <- rbind("LowDose vs. NormalFood" = c(-1,1,0,0),
+           "MedDose vs. NormalFood" = c(-1,0,1,0),
+           "HighDose vs. NormalFood" =c(-1,0,0,1))
+summary(glht(out, linfct=mcp(Treatment=C)))
+```
+
+Run the following code and compare the results with the above analysis. Explain the differences and similarities.
+
+``` 
+dat_EarThickness$$Treatment2 <- factor(dat_EarThickness$Treatment, ordered=T)
+out <- lm(EarThickness ~ Treatment2, data=dat_EarThickness)
+summary(out)
+summary(glht(out, linfct=C))
+summary(glht(out, linfct=mcp(Treatment2=C)))
+```
+
+(Optional) Experiment the analysis using different contrasts. 
+
+(Optional) Experiment with different methods for p-value adjustment to control for experiment-wise error rate.
+
+## Design your own contrast coding for the categorical variables (optional)
+Exercise:
+
+Design your own categorical variable coding for the following Helmert contrasts.
+$$
+K= \left[ \begin{array} {rrr} 1/4 & 1/4 & 1/4 & 1/4\\-1 & 1 & 0 & 0 \\ -1/2 & -1/2 & 1 & 0 \\ -1/3 & -1/3 & -1/3 & 1  \end{array} \right]
+$$
+
+Apply this categorical variable coding to the analysis of the ear thickness data. 
+
+Compare the coefficients estimates from the two linear regression analyses: 
+
+1. using your own coding contrast based on the above K matrix. 
+    
+2. using `contr.poly` from R. Explain the differences in the coefficients estimate.  
+
+

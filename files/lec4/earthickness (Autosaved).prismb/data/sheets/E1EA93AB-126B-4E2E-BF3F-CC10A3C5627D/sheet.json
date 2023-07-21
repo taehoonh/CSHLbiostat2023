@@ -1,0 +1,61 @@
+{
+	"@class": "DataSheet",
+	"$id": "sheets/data_sheet/data_sheet.schema.json",
+	"uid": "E1EA93AB-126B-4E2E-BF3F-CC10A3C5627D",
+	"fenID": 1,
+	"title": "Ordinary one-way ANOVA of Data 1:ANOVA results",
+	"isCollapsed": true,
+	"table": {
+		"@class": "DataTable",
+		"$id": "sheets/data_sheet/data_table/data_table.schema.json",
+		"uid": "BD6F440C-F84E-4969-9A59-5967C5D00693",
+		"format": "view",
+		"dataFormat": "text",
+		"rowTitlesDataSet": "3DCBF84F-CE56-4339-976F-AD4698AC02D2",
+		"dataSets": [
+			"AAA4F420-5D6C-4151-91DB-8136F28E7102",
+			"02853388-E4DA-491A-9565-63502F327906",
+			"64ECC26F-DDE0-4D06-969A-40E24F74BE5E",
+			"CA2A5557-4AAC-4363-B819-25485F50B625",
+			"1BC1C536-A2AE-4D52-933D-C455CB711217"
+		]
+	},
+	"font": {
+		"family": "Arial",
+		"size": 16.0
+	},
+	"flags": [
+		"ANALYSIS_VIEW"
+	],
+	"titleWidth": 72,
+	"xSubColWidth": 72,
+	"maxDataSets": 2048,
+	"maxRow": 500000,
+	"selectionRange": {
+		"startCell": {
+			"row": 0,
+			"column": 0,
+			"subcolumn": 0
+		},
+		"endCell": {
+			"row": 0,
+			"column": 0,
+			"subcolumn": 0
+		}
+	},
+	"anchorRow": 0,
+	"anchorColumn": 0,
+	"firstSubColumn": 0,
+	"columnWidths": [
+		{
+			"number": 0,
+			"width": 121.0
+		},
+		{
+			"number": 3,
+			"width": 137.0
+		}
+	],
+	"rowTitlesWidth": 316,
+	"subColumnTitleType": "default"
+}

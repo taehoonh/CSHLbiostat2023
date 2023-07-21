@@ -1,0 +1,28 @@
+---
+title: "Activity datasets"
+author: "Taehoon Ha"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+data <- read.delim("dat_EarThickness.txt")
+
+# Pivot the data to wide format
+data_wide <- data %>% dplyr::select(-MouseID) %>%
+   pivot_wider(names_from = Treatment, values_from = EarThickness)
+
+
+data %>% group_by(Treatment) %>% summarise(n = n())
+
+cbind(NormalFood = data[1:15, 3], 
+      LowDose = data[16:30, 3], 
+      MedDose = data[31:45, 3], 
+      HighDose = data[46:60, 3]
+      ) %>% as.data.frame() %>%
+    write.csv(., "test.csv", row.names = F)
+```
+

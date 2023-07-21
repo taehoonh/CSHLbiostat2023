@@ -1,0 +1,14 @@
+{
+	"@class": "AnalysisView",
+	"uid": "FE17FAA0-154A-40DE-B8F6-2DA70FC21945",
+	"$id": "analyses/view.schema.json",
+	"dataSheet": "CCE529D7-83BB-4C17-AF30-88F75C94AE2B",
+	"name": "Multiple comparisons",
+	"viewIdx": 1,
+	"graphId": -1,
+	"graphFlags": 0,
+	"tabState": "AUTO",
+	"isVisible": true,
+	"isInternal": false,
+	"isColumnLabelsVisible": false
+}

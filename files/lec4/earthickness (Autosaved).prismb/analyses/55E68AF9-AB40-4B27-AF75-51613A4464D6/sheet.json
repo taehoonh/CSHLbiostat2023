@@ -1,0 +1,56 @@
+{
+	"@class": "AnalysisSheet",
+	"uid": "55E68AF9-AB40-4B27-AF75-51613A4464D6",
+	"fenID": 0,
+	"title": "Ordinary one-way ANOVA of Data 1",
+	"$id": "analyses/sheet.schema.json",
+	"analysisClass": "ONE_WAY_ANOVA",
+	"isAllDataAnalyzed": true,
+	"currentResultSheet": "0318BE05-BDDA-4AC3-8D3A-B01928FFD944",
+	"preferredResultSheet": "0318BE05-BDDA-4AC3-8D3A-B01928FFD944",
+	"pairwiseComparisonsDataUid": "ACC5CFA8-D0E0-4B50-9F71-D2AFF647E222",
+	"minRequiredVersion": {
+		"major": 6,
+		"minor": 0,
+		"subminor": 0,
+		"build": 0
+	},
+	"resultSheets": [
+		{
+			"uid": "0318BE05-BDDA-4AC3-8D3A-B01928FFD944",
+			"title": "ANOVA results"
+		},
+		{
+			"uid": "FE207515-972F-44CF-B69E-021398BF0E07",
+			"title": "Multiple comparisons"
+		}
+	],
+	"inputDataSets": [
+		{
+			"uid": "823ACA02-BF83-47D6-9E54-20D334747E86",
+			"title": "NormalFood",
+			"idx": "A"
+		},
+		{
+			"uid": "FAAA2EE8-FBA4-4563-B3F5-B545F220E15E",
+			"title": "LowDose",
+			"idx": "B"
+		},
+		{
+			"uid": "B4E74145-EF3E-47D1-A156-F7236AD5311C",
+			"title": "MedDose",
+			"idx": "C"
+		},
+		{
+			"uid": "6FC0B9D2-FC6C-4B42-962F-E9342294A638",
+			"title": "HighDose",
+			"idx": "D"
+		}
+	],
+	"inputSheets": [
+		{
+			"uid": "BECEC134-0E03-4956-ACE7-05B5B93B4C9E",
+			"title": "Data 1"
+		}
+	]
+}
