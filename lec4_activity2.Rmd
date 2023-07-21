@@ -1,5 +1,5 @@
 ---
-title: "Lecture4 Activity2: "
+title: "Lecture4 Activity2: ANOVA and Multiple Hypothesis Testing"
 output:
   html_document: 
     toc: true
@@ -10,6 +10,8 @@ output:
 ### Question 1: One-way ANOVA
 
 In this experiment, the study endpoint involved measuring the thickness of mouse ears 96 hours after subjecting them to a fixed duration of UV radiation. The study hypothesis posits that mice receiving a specific dose of the supplement will exhibit reduced ear thickness compared to mice receiving normal food. Moreover, the effect of the supplement on ear thickness is expected to be more pronounced with higher doses.
+
+You can download the data [HERE](files/lec4/earthickness.pzfx).
 
 Is there a significant difference in ear thickness among the groups exposed to different doses of the supplement and the control group (mice receiving normal food) after 96 hours of UV radiation exposure? To test this, please perform a one-way ANOVA analysis on the data.
 
