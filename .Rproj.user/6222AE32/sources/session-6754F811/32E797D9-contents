@@ -1,0 +1,29 @@
+---
+title: "Untitled"
+author: "Taehoon Ha"
+date: "2023-07-21"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+set.seed(42)
+
+# Number of patients
+n <- 50
+
+# Generate data for Patient, Gene Expression (X), and Tumor Size (Y)
+data <- data.frame(
+  Patient = 1:n,
+  Gene_Expression_X = round(rnorm(n, mean = 5.5, sd = 0.6), 1),
+  Tumor_Size_Y = round(rnorm(n, mean = 3.3, sd = 0.5), 1)
+)
+
+cor.test(data$Gene_Expression_X, data$Tumor_Size_Y)
+
+write.csv(data, "test.csv", row.names = F)
+```
+
