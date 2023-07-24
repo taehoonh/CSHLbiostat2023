@@ -3,7 +3,7 @@
     "path": "~/Documents/github/CSHLbiostat2023/lec1_activity1.Rmd",
     "project_path": "lec1_activity1.Rmd",
     "type": "r_markdown",
-    "hash": "3809020835",
+    "hash": "4144193851",
     "contents": "",
     "dirty": false,
     "created": 1690222071453.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "48,309",
-        "scrollLine": "44"
+        "cursorPosition": "21,2",
+        "scrollLine": "13"
     },
     "folds": "",
-    "lastKnownWriteTime": 1690222079,
+    "lastKnownWriteTime": 1690222452,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1690222079849,
+    "last_content_update": 1690222452343,
     "read_only": false,
     "read_only_alternatives": []
 }

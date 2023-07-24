@@ -20,22 +20,22 @@ You are conducting a study to evaluate a new diagnostic test for a rare disease.
 
   Sensitivity = (90 / 100) * 100 = 90%
   Specificity = (85 / 100) * 100 = 85%
-  </pre>
+</pre>
 
   <table style="border-collapse: collapse; border: 1px solid black; width: 300px;">
     <tr style="border: 1px solid black;">
       <th style="border: 1px solid black; padding: 8px;">&nbsp;</th>
-      <th style="border: 1px solid black; padding: 8px;">Test Positive</th>
-      <th style="border: 1px solid black; padding: 8px;">Test Negative</th>
-    </tr>
-    <tr style="border: 1px solid black;">
       <th style="border: 1px solid black; padding: 8px;">Condition True</th>
-      <td style="border: 1px solid black; padding: 8px;">90</td>
-      <td style="border: 1px solid black; padding: 8px;">10</td>
+      <th style="border: 1px solid black; padding: 8px;">Condition False</th>
     </tr>
     <tr style="border: 1px solid black;">
-      <th style="border: 1px solid black; padding: 8px;">Condition False</th>
+      <th style="border: 1px solid black; padding: 8px;">Test Positive</th>
+      <td style="border: 1px solid black; padding: 8px;">90</td>
       <td style="border: 1px solid black; padding: 8px;">15</td>
+    </tr>
+    <tr style="border: 1px solid black;">
+      <th style="border: 1px solid black; padding: 8px;">Test Negative</th>
+      <td style="border: 1px solid black; padding: 8px;">10</td>
       <td style="border: 1px solid black; padding: 8px;">85</td>
     </tr>
   </table>
@@ -53,26 +53,25 @@ A study is conducted to evaluate the accuracy of a new screening test for a cert
   <pre>
   Sensitivity = (True Positive / Total with Disease) * 100
   Specificity = (True Negative / Total without Disease) * 100
-
+  
   Sensitivity = (160 / 200) * 100 = 80%
   Specificity = (180 / 200) * 100 = 90%
-  </pre>
-  
-  
-    <table style="border-collapse: collapse; border: 1px solid black; width: 300px;">
+</pre>
+
+  <table style="border-collapse: collapse; border: 1px solid black; width: 300px;">
     <tr style="border: 1px solid black;">
       <th style="border: 1px solid black; padding: 8px;">&nbsp;</th>
-      <th style="border: 1px solid black; padding: 8px;">Test Positive</th>
-      <th style="border: 1px solid black; padding: 8px;">Test Negative</th>
-    </tr>
-    <tr style="border: 1px solid black;">
       <th style="border: 1px solid black; padding: 8px;">Condition True</th>
-      <td style="border: 1px solid black; padding: 8px;">160</td>
-      <td style="border: 1px solid black; padding: 8px;">40</td>
+      <th style="border: 1px solid black; padding: 8px;">Condition False</th>
     </tr>
     <tr style="border: 1px solid black;">
-      <th style="border: 1px solid black; padding: 8px;">Condition False</th>
+      <th style="border: 1px solid black; padding: 8px;">Test Positive</th>
+      <td style="border: 1px solid black; padding: 8px;">160</td>
       <td style="border: 1px solid black; padding: 8px;">20</td>
+    </tr>
+    <tr style="border: 1px solid black;">
+      <th style="border: 1px solid black; padding: 8px;">Test Negative</th>
+      <td style="border: 1px solid black; padding: 8px;">40</td>
       <td style="border: 1px solid black; padding: 8px;">180</td>
     </tr>
   </table>
