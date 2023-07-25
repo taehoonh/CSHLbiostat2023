@@ -9,6 +9,17 @@ output:
 
 ### Question 1
 
+You can download the dataset [HERE](files/lec5/tumorsize.csv). 
+
+You are provided with a tumor size dataset, and your task is to perform multiple linear regression using Prism Graphpad. The dataset contains three variables: `TumorSize` (dependent variable), `Gene1` and `Gene2` (independent variables). Follow the steps below to conduct the analysis and interpret the results:
+
+a. Perform multiple linear regression using Prism Graphpad, with `TumorSize` as the dependent variable and `Gene1` and `Gene2` as independent variables.
+
+b. Display the summary of the linear regression model to obtain the estimated coefficients for `Gene1` and `Gene2`.
+
+c. Interpret each coefficient obtained from the regression model.
+
+
 
 <br>
 
