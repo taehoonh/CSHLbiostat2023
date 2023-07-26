@@ -24,8 +24,8 @@ b) Please analyze the data. Does it appear as though there is a significant diff
 <br>
 
 a) 
-+ Null hypothesis: success rate is the same as the standard treatment ($\pi_{new}=60%$).
-+ Alternative hypothesis: success rate is different. ($\pi_{new} \ne 60$)
++ Null hypothesis: success rate is the same as the standard treatment ($\pi_{new}=0.6$).
++ Alternative hypothesis: success rate is different. ($\pi_{new} \ne 0.6$)
 
 
 b) The two-sided binomial test yielded a p-value of 0.0021, indicating a significant difference in the proportion of successful outcomes between the new drug treatment and the standard treatment (60% success rate). In conclusion, the new drug treatment demonstrated a superior effectiveness compared to the standard treatment.
@@ -39,7 +39,7 @@ Suppose you are conducting a pre-clinical study to evaluate the effectiveness of
 
 After a specified treatment period, you assess the presence or absence of symptoms in the mice. Out of the 50 treated mice, 40 show improvement and no longer exhibit symptoms associated with the disorder.
 
-Please determine if the gene therapy treatment has a significant effect in reducing symptoms compared to the expected proportion.
+Please determine if the gene therapy treatment has a significant effect in reducing symptoms compared to the expected proportion. Our baseline is 50%.
 
 <br>
 
