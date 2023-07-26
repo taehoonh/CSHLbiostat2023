@@ -19,4 +19,19 @@ They will be happy to assist you with any course-related inquiries or provide fu
 
 <br>
 
+### *Biostatistics Office Hour*
 
+🕑 **When: Thursdays, 2-4 pm**
+
+Welcome to our Cancer-Center-sponsored core resource! Our aim is to support and enhance statistical collaboration in biomedical research at Cold Spring Harbor Laboratory.
+
+👉 **What to expect:**
+Get one-hour of complimentary statistical advice tailored to your research needs. Exclusively available for CSHL Cancer Center faculty, staff, and students.
+
+📧 **How to schedule an appointment:**
+
+<!-- Calendly link widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/cshlbiostat'});return false;">Schedule time with Taehoon</a>
+<!-- Calendly link widget end -->
