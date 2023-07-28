@@ -1,0 +1,89 @@
+
+############################################
+# Biostatistics II                         #
+# Spring 2019                              #
+# 3.3. Regression Models for Survival Data #
+# Jihui Lee (Weill Cornell Medicine)       #
+############################################
+
+rm(list = ls())
+
+# Survival analysis
+library(survival)
+
+# Flexible parametric regression
+library(flexsurv)
+
+# Drawing Survival Curves using 'ggplot2'
+library(survminer)
+
+######################
+# Load data UIS Surv #
+######################
+
+# Data from a RCT comparing outcomes from different residential treatment programs for drug abuse
+dat = read.csv("uissurv.csv")
+
+# age: Age at enrollment (years)
+# beck: Beck Depression Score
+# hercoc: Heroin or Cocaine Use prior to entry
+# ivhx: IV Drug use at Admission
+# ndrugtx: Number previous drug treatments
+# race: 0 if white, 1 if non-white
+# treat: Treatment intervention (0 = Short / 1 = Long)
+# site: Treatment site (0 = A / 1 = B)
+# los: Length of treatment (days)
+# time: Time to drug relapse from admission date (days)
+# censor: 0 if censored, 1 if event
+
+head(dat)
+
+# Censoring indicator (0: censored / 1: event)
+table(dat$censor)
+
+# Survival time
+Surv(time = dat$time, event = dat$censor)[1:10]
+
+
+########################################
+# Accelerated failure time (AFT) model #
+########################################
+
+# Two ways to fit parametric regression models for survival data
+# survreg(), flexsurvreg()
+
+# Weibull
+reg_w = survreg(Surv(time, censor) ~ treat, data = dat)
+summary(reg_w)
+
+flexreg_w = flexsurvreg(Surv(time, censor) ~ treat, data = dat, dist = "weibull")
+flexreg_w
+
+# Log-normal
+reg_ln = survreg(Surv(time, censor) ~ treat, dist = "lognormal", data = dat)
+summary(reg_ln)
+
+flexreg_ln = flexsurvreg(Surv(time, censor) ~ treat, data = dat, dist = "lognormal")
+flexreg_ln
+
+ggflexsurvplot(flexreg_w, data = dat)
+ggflexsurvplot(flexreg_ln, data = dat)
+
+# Multiple predictors
+
+# Weibull distribution
+reg1 = survreg(Surv(time, censor) ~ treat + race + site + age + los, data = dat)
+summary(reg1)
+
+flexreg1 = flexsurvreg(Surv(time, censor) ~ treat + race + site + age + los, data = dat, dist = "weibull")
+flexreg1
+
+ggflexsurvplot(flexreg1, data = dat)
+
+# Remove age
+reg2 = survreg(Surv(time, censor) ~ treat + race + site + los, data = dat)
+summary(reg2)
+
+# Model comparison
+anova(reg1, reg2)
+

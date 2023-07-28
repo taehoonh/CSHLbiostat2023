@@ -1,0 +1,19 @@
+---
+title: "Activity datasets"
+author: "Taehoon Ha"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(MASS)
+data(cats)
+# write.csv(cats, "cats.csv")
+
+fit <- lm(Hwt ~ Bwt + Sex + Bwt*Sex, cats)
+summary(fit)
+```
+

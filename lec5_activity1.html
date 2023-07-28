@@ -358,43 +358,119 @@ div.tocify {
 
 
 <p><br></p>
-<div id="question-1" class="section level3">
-<h3>Question 1</h3>
+<div id="question-1-simple-linear-regression" class="section level3">
+<h3>Question 1: Simple Linear Regression</h3>
 <p>You can download the dataset <a
-href="files/lec5/tumorsize.csv">HERE</a>.</p>
-<p>You are provided with a tumor size dataset, and your task is to
-perform multiple linear regression using Prism Graphpad. The dataset
-contains three variables: <code>TumorSize</code> (dependent variable),
-<code>Gene1</code> and <code>Gene2</code> (independent variables).
+href="files/lec5/cats.pzfx">HERE</a>.</p>
+<p>You are provided with a cats’ heart weight and body weight dataset,
+and your task is to perform a simple linear regression using Prism
+Graphpad. The dataset contains tho variables: <code>Hwt</code>
+(dependent variable) and <code>Bwt</code> (independent variables).
 Follow the steps below to conduct the analysis and interpret the
 results:</p>
-<ol style="list-style-type: lower-alpha">
-<li><p>Perform multiple linear regression using Prism Graphpad, with
-<code>TumorSize</code> as the dependent variable and <code>Gene1</code>
-and <code>Gene2</code> as independent variables.</p></li>
-<li><p>Display the summary of the linear regression model to obtain the
-estimated coefficients for <code>Gene1</code> and
-<code>Gene2</code>.</p></li>
-<li><p>Interpret each coefficient obtained from the regression
-model.</p></li>
-</ol>
+<p>Perform a simple linear regression using Prism Graphpad, with
+<code>Hwt</code> as the dependent variable and <code>Bwt</code> as an
+independent variable. Display the summary of the linear regression model
+to obtain the estimated coefficient for <code>Bwt</code>. Interpret the
+coefficient and <span class="math inline">\(R^2\)</span> obtained from
+the regression model.</p>
 <p><br></p>
 <details>
 <summary>
 <strong>Answer to Question 1:</strong>
 </summary>
 <p><br></p>
+<p><img src="files/lec5/cats_regression.png" alt="Cats Regression Model" style="width: 50%;"></p>
+<p><br></p>
+<p><strong>- Slope: 4.034</strong></p>
+<p>Indicates that, on average, cats’ heart weight increases by 4.034
+units for every one-unit increase in their body weight. This positive
+slope suggests a positive linear relationship between cats’ body weight
+and heart weight.</p>
+<p><strong>- Y-intercept: -0.3567</strong></p>
+<p>Implies that when cats have a body weight of zero (which is not
+practically meaningful for this context), their estimated heart weight
+is -0.3567 units. The Y-intercept may not be directly interpretable in
+this case due to the unrealistic value of zero body weight.</p>
+<p><strong>- <span class="math inline">\(R^2\)</span>: 0.6466</strong>
+Suggests that approximately 64.66% of the variation in cats’ heart
+weight can be explained by variations in their body weight. This
+R-squared value indicates a moderate level of correlation between the
+two variables.</p>
+<p>The very low p-value (&lt;0.0001) implies that cats’ body weight has
+a statistically significant impact on their heart weight. The
+significant slope confirms that there is a meaningful relationship
+between the two variables in the dataset.</p>
 </details>
 <p><br><br></p>
 </div>
-<div id="question-2" class="section level3">
-<h3>Question 2</h3>
+<div id="question-2-multiple-linear-regression" class="section level3">
+<h3>Question 2: Multiple Linear Regression</h3>
+<p>After conducting a simple linear regression, we now seek to enhance
+our analysis by introducing an additional independent variable,
+<code>Sex</code>, and fitting a new multiple linear regression
+model.</p>
+<p>Using Prism Graphpad, perform a multiple linear regression model with
+Hwt (cats’ heart weight) as the outcome variable and Bwt (body weight)
+and Sex as independent variables. Obtain the summary of the linear
+regression model to extract the estimated coefficients for Bwt and Sex.
+Please interpret each coefficient, keeping in mind that Bwt is a
+continuous variable, while Sex is categorical.</p>
+<p>You can download the dataset <a
+href="files/lec5/cats_multiple.pzfx">HERE</a>.</p>
 <p><br></p>
 <details>
 <summary>
 <strong>Answer to Question 2:</strong>
 </summary>
 <p><br></p>
+<ul>
+<li><p>Intercept (<span class="math inline">\(\beta_0\)</span>): 1.060,
+with a standard error of 0.1020. It is significantly different from zero
+(t = 10.40, p &lt; 0.0001), implying that when all other predictors are
+zero, the estimated <code>Bwt</code> is 1.060. The Y-intercept may not
+be directly interpretable in this case due to the unrealistic value of
+zero body weight for female cats.</p></li>
+<li><p>Sex[M] (<span class="math inline">\(\beta_1\)</span>): 0.2410,
+with a standard error of 0.05284. It is significantly different from
+zero (t = 4.561, p &lt; 0.0001), indicating that, on average, cats with
+a <code>Sex</code> value of <code>M</code> (male cats) have a 0.2410
+unit increase in <code>Bwt</code> compared to cats with <code>Sex</code>
+value of <code>F</code> (female cats).</p></li>
+<li><p>Hwt (<span class="math inline">\(\beta_2\)</span>): 0.1412, with
+a standard error of 0.01021. It is significantly different from zero (t
+= 13.83, p &lt; 0.0001), suggesting that for each one-unit increase in
+<code>Hwt</code>, there is a 0.1412 unit increase in
+<code>Bwt</code>.</p></li>
+</ul>
+<p>In addition to the interpretation, we can also check the following
+information according to the Prism Graphpad analysis result:</p>
+<ul>
+<li><p>The multiple linear regression model is statistically significant
+(p &lt; 0.0001), as indicated by the F-test (F(2, 141) = 158.4),
+suggesting that the independent variables collectively have a
+significant impact on the dependent variable, <code>Bwt</code>.</p></li>
+<li><p>The model’s goodness of fit is represented by R-squared, which is
+0.6920, indicating that approximately 69.20% of the variation in
+<code>Bwt</code> is explained by the independent variables
+(<code>Sex</code> and <code>Hwt</code>) in the model.</p></li>
+<li><p>The residuals’ normality tests (D’Agostino-Pearson omnibus,
+Anderson-Darling, Shapiro-Wilk, and Kolmogorov-Smirnov) indicate that
+the assumption of normality for the residuals is satisfied, suggesting
+the model’s residuals are normally distributed.</p></li>
+<li><p>In the initial multiple linear regression model
+(<code>Hwt ~ Bwt + Sex</code>), we assess the separate impacts of
+<code>Bwt</code> (body weight) and <code>Sex</code> (categorical
+variable) on predicting cats’ heart weight (Hwt) without considering
+their interaction. The expanded model
+(<code>Hwt ~ Bwt + Sex + Bwt:Sex</code>) introduces the interaction term
+<code>Bwt:Sex</code> to examine whether the relationship between
+<code>Bwt</code> and <code>Hwt</code> varies between male and female
+cats, as there could be an association between body weight and gender.
+An ANOVA test will determine the significance of the interaction,
+helping us assess whether including it improves the model’s ability to
+predict <code>Hwt</code> accurately for cats.</p></li>
+</ul>
 </details>
 <p><br><br></p>
 <p><a href="schedule.html">&lt; Go Back</a></p>

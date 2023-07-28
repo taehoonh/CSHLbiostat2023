@@ -1,0 +1,18 @@
+---
+title: "Activity datasets"
+author: "Taehoon Ha"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# write.csv(veteran, "veteran.csv")
+library(survival)
+library(survminer)
+km2 = survfit(Surv(time, status) ~ trt, data = veteran)
+survdiff(Surv(time, status) ~ trt, data = veteran)
+```
+

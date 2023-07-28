@@ -11,7 +11,7 @@
 
 
 
-<title>Lecture5 Activity2: Survival Analysis</title>
+<title>Lecture5 Activity2: Survival Analysis &amp; Logistic Regression</title>
 
 <script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -352,31 +352,150 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Lecture5 Activity2: Survival Analysis</h1>
+<h1 class="title toc-ignore">Lecture5 Activity2: Survival Analysis &amp;
+Logistic Regression</h1>
 
 </div>
 
 
 <p><br></p>
-<div id="question-1" class="section level3">
-<h3>Question 1</h3>
+<div id="question-1-survival-analysis" class="section level3">
+<h3>Question 1: Survival Analysis</h3>
+<p>The Veterans’ Administration Lung Cancer study is a randomized trial
+comparing two treatment regimens for lung cancer. The dataset contains
+information on treatment type (standard vs. test), survival time, and
+censoring status. This dataset is ideal for conducting a survival
+analysis to explore the impact of the treatments on survival outcomes.
+Please perform a survival analysis by using the variables “trt” and
+“time” from the dataset, and then explore the relationship between “trt”
+and “time” to understand how the treatments affect survival rates.
+Please interpret your survival analysis result.</p>
+<ul>
+<li>Source: The Statistical Analysis of Failure Time Data by D.
+Kalbfleisch and RL Prentice (1980).</li>
+</ul>
+<p>You can download the dataset <a
+href="files/lec5/lungcancer.pzfx">HERE</a>.</p>
 <p><br></p>
 <details>
 <summary>
 <strong>Answer to Question 1:</strong>
 </summary>
 <p><br></p>
+<p><img src="files/lec5/lungcancer.png" alt="Veteran's lung cancer survival analysis" style="width: 80%;"></p>
+<p><br></p>
+<p>Based on the survival analysis, there is no significant difference in
+survival between the standard and test treatments, but the median
+survival time and hazard ratios suggest a potential benefit of the
+standard treatment in terms of longer survival. However, these
+observations are not statistically significant, so further investigation
+may be needed.</p>
+<p><br></p>
+<p>In addition to the interpretation, we can also check the following
+information according to the Prism Graphpad analysis result:</p>
+<ul>
+<li><p>The log-rank and Gehan-Breslow-Wilcoxon tests both show
+non-significant p-values (p &gt; 0.05), indicating that there is no
+statistically significant difference between the survival curves of the
+standard and test treatments.</p></li>
+<li><p>The median survival time for the standard treatment is
+approximately 103.0 units, while for the test treatment, it is
+approximately 52.50 units. The ratio of median survival between the two
+treatments is 1.962, with a 95% confidence interval of 1.387 to 2.774.
+This suggests that the standard treatment shows longer median survival
+compared to the test treatment.</p></li>
+<li><p>The hazard ratios (both Mantel-Haenszel and log-rank methods)
+also indicate that the risk of an event (e.g., death) for the standard
+treatment is slightly lower than the test treatment. However, the
+confidence intervals for these hazard ratios include 1, indicating that
+the difference is not statistically significant.</p></li>
+</ul>
 </details>
 <p><br><br></p>
 </div>
-<div id="question-2" class="section level3">
-<h3>Question 2</h3>
+<div id="question-2-logistic-regression" class="section level3">
+<h3>Question 2: Logistic Regression</h3>
+<p>You will perform a multiple logistic regression analysis using Prism
+GraphPad to examine the factors influencing graduate school
+admissions.</p>
+<p>You can download the data <a
+href="files/lec5/gradschool.pzfx">HERE</a>.</p>
+<p>The dataset contains applicants’ GRE scores, GPA, and undergraduate
+institute rank, with an ‘admit’ variable indicating admission
+status.</p>
+<ul>
+<li><code>admit</code>: 1 = Yes, 0 = No</li>
+<li><code>gre</code>: GRE score (200-800)</li>
+<li><code>gpa</code>: GPA (out of 4.0)</li>
+<li><code>rank</code>: Rank of undergraduate institute (1: highest
+prestige - 4: lowest)</li>
+</ul>
+<p>Please build the logistic regression model with <code>admit</code> as
+the dependent variable and <code>gre</code>, <code>gpa</code>, and
+<code>rank</code> (reference group=4) as predictors. Interpret the
+coefficients.</p>
 <p><br></p>
 <details>
 <summary>
 <strong>Answer to Question 2:</strong>
 </summary>
 <p><br></p>
+<p><strong>- Intercept (<span
+class="math inline">\(\beta_0\)</span>):</strong></p>
+<p>The odds ratio for the intercept is 0.003921. This means that when
+all predictor variables (GRE, GPA, and rank) are zero, the odds of
+admission are approximately 0.39% (0.003921 * 100%) of being admitted to
+the graduate program.</p>
+<p>The intercept value of -5.541 represents the log odds of admission
+when all predictor variables (GRE, GPA, and rank) are zero. However,
+since it is unlikely for applicants to have zero GRE scores, GPAs, or
+rank, the intercept’s practical interpretation might not be meaningful
+in this context.</p>
+<p><strong>- GRE (<span
+class="math inline">\(\beta_1\)</span>):</strong></p>
+<p>The odds ratio for GRE is 1.002. For every one-unit increase in GRE
+score, the odds of admission increase by approximately 0.2% (1.002 *
+100%).</p>
+<p>This effect is relatively small, suggesting that GRE scores have a
+minor impact on the likelihood of admission.</p>
+<p><strong>-GPA (<span
+class="math inline">\(\beta_2\)</span>):</strong></p>
+<p>The odds ratio for GPA is 2.235.</p>
+<p>A one-unit increase in GPA results in a substantial 123.5% increase
+in the odds of admission. GPA appears to be a significant predictor,
+strongly influencing the chances of being admitted to the graduate
+program.</p>
+<p><strong>- Rank[3] (<span
+class="math inline">\(\beta_3\)</span>):</strong></p>
+<p>The odds ratio for the 3rd highest prestige undergraduate institute
+(Rank[3]) is 1.235. This indicates that applicants from the 3rd highest
+ranked undergraduate institutions have approximately 23.5% higher odds
+of being admitted. However, the confidence interval includes zero,
+indicating that this effect is not statistically significant.</p>
+<p><strong>- Rank[1] (<span
+class="math inline">\(\beta_4\)</span>):</strong></p>
+<p>The odds ratio for the 1st highest prestige undergraduate institute
+(Rank[1]) is 4.718. Applicants from the 1st highest ranked undergraduate
+institutions have approximately 371.8% higher odds of being admitted
+compared to applicants from lower-ranked institutions.</p>
+<p>This suggests that applicants from the most prestigious undergraduate
+institutions have a significantly higher likelihood of being admitted to
+the graduate program.</p>
+<p><strong>- Rank[2] (<span
+class="math inline">\(\beta_5\)</span>):</strong></p>
+<p>The odds ratio for the 2nd highest prestige undergraduate institute
+(Rank[2]) is 2.401.</p>
+<p>The rank of the 2nd highest prestige undergraduate institute is
+associated with a 140.1% increase in the odds of admission. This
+indicates that applicants from the second-highest ranked institutions
+also have a higher chance of being admitted compared to those from
+lower-ranked institutions.</p>
+<p>Overall, a higher GPA is strongly associated with increased odds of
+admission, and applicants from the 1st and 2nd highest prestige
+undergraduate institutions have significantly higher admission
+probabilities. However, the effect of GRE and rank[3] is comparatively
+smaller and may not be statistically significant in the case of
+rank[3].</p>
 </details>
 <p><br><br></p>
 <p><a href="schedule.html">&lt; Go Back</a></p>

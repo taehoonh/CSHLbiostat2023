@@ -7,7 +7,7 @@ output:
 ---
 <br>
 
-### Question 1: Simple Linear Regression
+### Question 1
 
 You can download the dataset [HERE](files/lec5/cats.pzfx). 
 
@@ -44,7 +44,7 @@ The very low p-value (<0.0001) implies that cats' body weight has a statisticall
 </details>
 <br><br>
 
-### Question 2: Multiple Linear Regression
+### Question 2
 
 After conducting a simple linear regression, we now seek to enhance our analysis by introducing an additional independent variable, `Sex`, and fitting a new multiple linear regression model.
 
